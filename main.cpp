@@ -95,14 +95,8 @@ int main()
       }
       std::cout << "Cout total : " << total * jour << " $ pour une periode de " << jour << " jour(s)." << std::endl;
       // Destruction des Constructeurs.
-      if (nb_couts > 0)
-      {
-        for (int i = 0; i < nb_couts; i++)
-          delete lescouts[i];
-      }
-      else
 
-        break;
+      break;
     }
     case 5:
     {
@@ -117,4 +111,8 @@ int main()
     }
     };
   } while (choix != 5);
+
+  //Destructeur de couts
+  for (int i = 0; i < nb_couts; i++)
+    delete lescouts[i];
 }
